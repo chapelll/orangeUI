@@ -1,0 +1,23 @@
+{
+  "name": "orangeui",
+  "version": "0.0.1",
+  "description": "这是一个UI组件库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chapelll/orangeUI.git"
+  },
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "chapelll",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chapelll/orangeUI/issues"
+  },
+  "homepage": "https://github.com/chapelll/orangeUI#readme"
+}
