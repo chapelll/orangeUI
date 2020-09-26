@@ -1,4 +1,4 @@
-# 橘子UI - 使用Vue搭建的UI组件
+# 橘子UI - 使用Vue搭建的UI组件库
 
 作者: chapelll
 
