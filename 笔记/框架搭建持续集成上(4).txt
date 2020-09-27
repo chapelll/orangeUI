@@ -1,3 +1,7 @@
 不使用vue-cli，使用parcel搭建一个项目框架
 
 写了几个按钮，在按钮中添加了一些iconfont图标(将icon封装成了一个组件)
+
+添加菊花状态: button组件里将g-icon的class绑定为index.html传入的值，如果传入
+loading那么这个button的class名就为loading，然后又针对.loading设置动画
+(给所有的icon设置一个类名，然后写一个类名为loading的动画)

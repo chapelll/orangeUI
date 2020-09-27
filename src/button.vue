@@ -1,5 +1,5 @@
 <template>
-  <button class="g-button">
+  <button :class="`g-button`">
     <g-icon :class="icon" v-if="icon" :name="icon"></g-icon>
     <slot></slot>
   </button>
@@ -7,12 +7,11 @@
 
 <script>
 export default {
-    props: ['icon']
+  props: ["icon"],
 };
 </script>
 
 <style lang="scss">
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -35,6 +34,7 @@ export default {
   vertical-align: middle;
   &:hover {
     border-color: var(--border-color-hover);
+    cursor: pointer;
   }
   &:active {
     background-color: var(--button-active-bg);
@@ -43,7 +43,7 @@ export default {
     outline: none;
   }
   .loading {
-    animation: spin 1.5s infinite linear;
+    animation: spin 1.75s infinite linear;
   }
 }
 </style>
