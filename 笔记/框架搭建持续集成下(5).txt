@@ -1,0 +1,10 @@
+使用 Karma + Mocha做单元测试
+Karma（[ˈkɑrmə] 卡玛）是一个测试运行器，它可以呼起浏览器，加载测试脚本，然后运行测试用例
+Mocha（[ˈmoʊkə] 摩卡）是一个单元测试框架/库，它可以用来写测试用例
+Sinon（西农）是一个 spy / stub / mock 库，用以辅助测试（使用后才能理解）
+
+配置好 karma.conf.js 文件 
+首先将测试脚本写在 test 文件夹中的button.test.js ，使用parcel build test/*将测试脚本打包好。
+然后再运行 karma start 。karma会自动打开浏览器运行 test 中的测试脚本，完成之后关闭浏览器，将浏览器的输出打印到命令
+
+单元测试就是使用chai来进行断言，使用Mocha来更方便地写断言，使用Karma让它自动打开浏览器测试
