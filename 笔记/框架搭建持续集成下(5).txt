@@ -8,3 +8,10 @@ Sinon（西农）是一个 spy / stub / mock 库，用以辅助测试（使用�
 然后再运行 karma start 。karma会自动打开浏览器运行 test 中的测试脚本，完成之后关闭浏览器，将浏览器的输出打印到命令
 
 单元测试就是使用chai来进行断言，使用Mocha来更方便地写断言，使用Karma让它自动打开浏览器测试
+引入travis进行持续集成:  利用travis帮助我们进行测试，每当我们git push时，travis会在云端帮我们自动测试，并将
+测试结果以邮件通知我们。 这样我们每次push代码时就会自动进行测试了 (在travis官网与该GitHub仓库建立了链接)
+
+使用npm上传自己的包
+
+设为淘宝镜像  npm config set registry http://registry.npm.taobao.org/
+设为官方源     npm config set registry https://registry.npmjs.org
