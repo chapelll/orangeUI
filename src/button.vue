@@ -1,5 +1,5 @@
 <template>
-  <button :class="`g-button`">
+  <button :class="`g-button zcz1`">
     <g-icon :class="icon" v-if="icon" :name="icon"></g-icon>
     <slot></slot>
   </button>
