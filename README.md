@@ -11,11 +11,15 @@
 ## 开始使用
 
 1.添加 CSS 样式
+
     使用前请在CSS中设置 border-box
+
     ```
     *,*::before,*::after { box-sizing: border-box; }
     ```
+
     你还需要设置颜色等默认变量
+
     ```
     :root {
         --font-size: 14px;
@@ -27,19 +31,23 @@
         --border-color: #999;
         --border-color-hover: #666;
         }
+
     ```
+
     该组件库支持IE15以上的浏览器版本
 
 2.安装 orangeUI
+
     ```
     npm i --save orangeui-test-1
     ```
 
 3.引入 orangeui
+
     ```
     import { Button, Icon } from "orangeui-test-1";
     import "orangeui-test-1/dist/index.css";
-
+    
     export default {
     name: "App",
     components: {
