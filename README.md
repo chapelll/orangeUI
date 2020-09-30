@@ -42,12 +42,12 @@
     npm i --save orangeui-test-1
     ```
 
-3.引入 orangeui
+3.引入 orangeUI
 
     ```
     import { Button, Icon } from "orangeui-test-1";
     import "orangeui-test-1/dist/index.css";
-    
+
     export default {
     name: "App",
     components: {

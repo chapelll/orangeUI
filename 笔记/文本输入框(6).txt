@@ -1,0 +1,7 @@
+禁止的输入框做法
+输入框只要有 disabled 属性就会变为禁止
+所以我们在index.html使用输入框时传入一个disabled属性
+在input组件里使用props接收这个属性，它的默认值是false(不传就没有，传了就为true)
+然后在模板里绑定上这个属性 :disabled="disabled"
+只要我们传入了disabled属性，那么input组件中的disabled就变为true，input转变为禁止状态
+我们不传入disabled属性，那么input组件中的disabled就是默认的false，不会有任何改变

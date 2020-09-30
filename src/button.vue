@@ -8,6 +8,7 @@
 <script>
 import Icon from './icon.vue'
 export default {
+  name: 'OrangeButton',
   components: {
     'g-icon': Icon
   },
@@ -15,7 +16,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -45,6 +46,9 @@ export default {
   }
   &:focus {
     outline: none;
+  }
+  &[disabled] {
+    cursor: not-allowed;
   }
   .loading {
     animation: spin 1.75s infinite linear;

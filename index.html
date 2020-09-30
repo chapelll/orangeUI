@@ -32,30 +32,44 @@
         }
     </style>
     <style>
+        .box {
+            margin: 20px;
+        }
     </style>
 </head>
 
 <body>
     <div id="app">
-        <g-button>
-            按钮
-        </g-button>
-        <g-button icon="setting">
-            按钮
-        </g-button>
-        <g-button icon="buy">
-            按钮
-        </g-button>
-        <g-button icon="good">
-            按钮
-        </g-button>
-        <g-button icon="loading">
-            按钮
-        </g-button>
-        <g-button disabled>
-            按钮
-        </g-button>
-        <div id="test"></div>
+        <div class="box">
+        <g-input value="默认输入框"></g-input>
+        <g-input value="只读的输入框" readonly></g-input>
+        <g-input value="禁止的输入框" disabled></g-input>
+        </div>
+
+        <div class="box">
+        <g-input value="输入错误的信息" error="输入出错"></g-input>
+        </div>
+
+        <div class="box">
+            <g-button>
+                按钮
+            </g-button>
+            <g-button icon="setting">
+                按钮
+            </g-button>
+            <g-button icon="buy">
+                按钮
+            </g-button>
+            <g-button icon="good">
+                按钮
+            </g-button>
+            <g-button icon="loading">
+                按钮
+            </g-button>
+            <g-button disabled>
+                按钮
+            </g-button>
+        </div>
     </div>
     <script src="./src/app.js"></script>
 </body>
