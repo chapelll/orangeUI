@@ -1,12 +1,12 @@
 <template>
   <div class="row">
-      <slot></slot>
+    <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-    name: 'OrangeRow'
+  name: "OrangeRow",
 };
 </script>
 

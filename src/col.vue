@@ -1,5 +1,5 @@
 <template>
-  <div class="col" :class="[`col-${span}`]">
+  <div class="col" :class="[span && `col-${span}`, offset && `offset-${offset}`]">
     <slot></slot>
   </div>
 </template>
@@ -9,8 +9,11 @@ export default {
   name: "OrangeCol",
   props: {
     span: {
-        type: [Number, String]
-    }
+      type: [Number, String],
+    },
+    offset: {
+      type: [Number, String],
+    },
   },
 };
 </script>
@@ -28,5 +31,12 @@ export default {
       width: ($n / 24) * 100%;
     }
   }
+  $class-prefix: offset-;
+  @for $n from 1 through 24 {
+    &.#{$class-prefix}#{$n} {
+      margin-left: ($n / 24) * 100%;
+    }
+  }
+  //设置偏移量offset(margin-left)
 }
 </style>
