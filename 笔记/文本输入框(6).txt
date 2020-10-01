@@ -16,3 +16,4 @@
 测试一个button的点击事件，首先写上一个button被点击了会触发一个回调 vm.$on('click',callback)
 然后定义点击事件 let event = new Event(click) ， 接着找到这个button，让它触发该事件 button.dispatchEvent(event)
 然后期望回调函数的执行 expect(callback).to.have.been.called
+1111
