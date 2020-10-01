@@ -76,13 +76,24 @@ describe('Input', () => {
         it('支持change/input/focus/blur事件.', () => {
             ['change','input','focus','change'].forEach((eventName)=>{
                 vm = new Constructor({}).$mount()
-                const callback = sinon.fake(); //定义一个回调函数
-                vm.$on(eventName,callback) //该input触发change事件时，传一个callback
-                let event = new Event(eventName) //定义change事件
+                const callback = sinon.fake(); 
+                //定义一个回调函数
+                vm.$on(eventName,callback) 
+                //该input触发eventName事件时，传一个callback
+                let event = new Event(eventName) 
+                //定义eventName的事件
+                Object.defineProperty(
+                    event,'target',{
+                        value: {value: 'hi'}, enumerable: true
+                    }
+                )
+                //给该事件增加target的value属性，其值为hi
                 let inputElement = vm.$el.querySelector('input')
-                inputElement.dispatchEvent(event)//input触发change事件
-                expect(callback).to.have.been.calledWith(event)
-                // 期待回调被调用且参数为这个event事件
+                //获取到该input输入框
+                inputElement.dispatchEvent(event)
+                //该input输入框去触发event事件
+                expect(callback).to.have.been.calledWith('hi')
+                //期待回调被调用且参数为这个event事件
             })
         })
     })

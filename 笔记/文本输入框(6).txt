@@ -5,3 +5,14 @@
 然后在模板里绑定上这个属性 :disabled="disabled"
 只要我们传入了disabled属性，那么input组件中的disabled就变为true，input转变为禁止状态
 我们不传入disabled属性，那么input组件中的disabled就是默认的false，不会有任何改变
+
+怎么写测试用例?
+
+其实就是写一些断言。
+比如针对某个输入框，我向他传入了value:123456，然后写我期望输入框的value值为123456
+我向他传入了一个类名为 什么什么 ，然后写我期望 它的类名为什么什么
+
+测试事件:
+测试一个button的点击事件，首先写上一个button被点击了会触发一个回调 vm.$on('click',callback)
+然后定义点击事件 let event = new Event(click) ， 接着找到这个button，让它触发该事件 button.dispatchEvent(event)
+然后期望回调函数的执行 expect(callback).to.have.been.called

@@ -11,7 +11,12 @@ new Vue({
     el: '#app',
     methods: {
         inputChange(e) {
-            console.log(e.target.value);
+            this.message = e
+        }
+    },
+    data() {
+        return {
+            message: '支持双向数据绑定'
         }
     }
 })
