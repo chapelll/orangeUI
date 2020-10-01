@@ -9,4 +9,9 @@ Vue.component('g-input', Input)
 
 new Vue({
     el: '#app',
+    methods: {
+        inputChange(e) {
+            console.log(e.target.value);
+        }
+    }
 })

@@ -12,7 +12,7 @@
             box-sizing: border-box;
         }
 
-        :root {
+        html {
             --font-size: 14px;
             --button-height: 32px;
             --button-bg: white;
@@ -41,13 +41,13 @@
 <body>
     <div id="app">
         <div class="box">
-        <g-input value="默认输入框"></g-input>
+        <g-input value="默认输入框" ></g-input>
         <g-input value="只读的输入框" readonly></g-input>
         <g-input value="禁止的输入框" disabled></g-input>
         </div>
 
         <div class="box">
-        <g-input value="输入错误的信息" error="输入出错"></g-input>
+        <g-input value="输入错误的信息" error="输入出错" @change="inputChange"></g-input>
         </div>
 
         <div class="box">
