@@ -33,6 +33,21 @@ export default {
       gutter: 0,
     };
   },
+  methods: {
+    createClasses(obj, str = "") {
+      if (!obj) {
+        return [];
+      }
+      let array = [];
+      if (obj.span) {
+        array.push(`col-${str}${obj.span}`);
+      }
+      if (obj.offset) {
+        array.push(`offset-${str}${obj.offset}`);
+      }
+      return array;
+    },
+  },
   computed: {
     colStyle() {
       return {
@@ -41,19 +56,15 @@ export default {
       };
     },
     colClass() {
-      let span = this.span;
-      let offset = this.offset;
-      let ipad = this.ipad;
-      let pc = this.pc;
+      let { span, offset, ipad, pc } = this;
+      let createClasses = this.createClasses
       return [
-        span && `col-${span}`,
-        offset && `offset-${offset}`,
-        ...(ipad ? [`col-ipad-${ipad.span}`] : []),
-        ...(pc ? [`col-pc-${pc.span}`] : []),
+        ...createClasses({ span, offset }),
+        ...createClasses(ipad, "ipad-"),
+        ...createClasses(pc, "pc-"),
       ];
     },
   },
-  
 };
 </script>
 
@@ -67,7 +78,7 @@ export default {
   @for $n from 1 through 24 {
     &.#{$class-prefix}#{$n} {
       width: ($n / 24) * 100%;
-    } 
+    }
   }
   $class-prefix: offset-;
   @for $n from 1 through 24 {
@@ -77,7 +88,7 @@ export default {
   }
   //设置偏移量offset(margin-left)
 
-  @media (min-width: 577px)  {
+  @media (min-width: 577px) {
     //设备宽度在577px~993px之间视为ipad
     $class-prefix: col-ipad-;
     @for $n from 1 through 24 {
