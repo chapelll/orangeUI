@@ -1,12 +1,23 @@
 <template>
-  <div class="col" :class="[span && `col-${span}`, offset && `offset-${offset}`]">
-    <slot></slot>
+  <div
+    class="col"
+    :class="[span && `col-${span}`, offset && `offset-${offset}`]"
+    :style="{paddingLeft: gutter/2 + 'px',paddingRight: gutter/2 + 'px'}"
+  >
+    <div style="border: 1px solid green; height: 100px">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "OrangeCol",
+  data() {
+    return {
+      gutter: 0
+    }
+  },
   props: {
     span: {
       type: [Number, String],
@@ -20,10 +31,7 @@ export default {
 
 <style lang="scss" scoped>
 .col {
-  height: 100px;
-  background-color: grey;
   width: 50%;
-  border: 1px solid red;
   // .col.col-1
   $class-prefix: col-;
   @for $n from 1 through 24 {

@@ -6,3 +6,13 @@ col组件为row组件中的一个个竖着的盒子，它的width为50%，也就
 
 offset偏移量就是col组件自己根据传入的值 offset="4"
 设置margin-left: 4 / 24 * 100%
+
+如何生成间隙?(以一个row装两个col为例)
+给每个col一个padding: 10px，这样两个col之间会有20px的间隙。但是它们会分别距row10px
+我们可以在row写上 margin: -10px, 这样两个col就直接顶着row且它们之间还是有20px的间隙
+做法: 给row传递一个gutter=20px， row就将自己的margin变为 -gutter/2
+然后在row挂载成功后，将gutter=20px传递给自己的子组件col，col收到后将padding变为 gutter/2
+
+cretaed钩子: 在内存中生成各个组件
+mounted钩子: 将组件挂载到页面上去
+Vue钩子的顺序: 先创建father，再创建children；再将children挂载到father上，最后将father挂载到页面上
