@@ -77,8 +77,8 @@ export default {
   }
   //设置偏移量offset(margin-left)
 
-  @media (min-width: 577px) {
-    //设备宽度在577px之上视为ipad
+  @media (min-width: 577px)  {
+    //设备宽度在577px~993px之间视为ipad
     $class-prefix: col-ipad-;
     @for $n from 1 through 24 {
       &.#{$class-prefix}#{$n} {
@@ -93,7 +93,7 @@ export default {
     }
   }
 
-  @media (min-width: 993px) {
+  @media (min-width: 992px) {
     //设备宽度在993px之上视为PC屏幕
     $class-prefix: col-pc-;
     @for $n from 1 through 24 {
