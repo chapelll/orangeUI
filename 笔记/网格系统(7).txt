@@ -16,3 +16,5 @@ offset偏移量就是col组件自己根据传入的值 offset="4"
 cretaed钩子: 在内存中生成各个组件
 mounted钩子: 将组件挂载到页面上去
 Vue钩子的顺序: 先创建father，再创建children；再将children挂载到father上，最后将father挂载到页面上
+
+测试代码中涉及到异步代码要使用done
