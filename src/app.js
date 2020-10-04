@@ -34,14 +34,15 @@ new Vue({
             this.message = e
         },
         showToast() {
-            this.$toast('我是toast',{
+            this.$toast('我是toast', {
                 closeButton: {
-                    text: '关闭谁',  //关闭按钮文本
+                    text: '关闭我',  //关闭按钮文本
                     callback() {    //关闭时执行的回调函数
                         console.log('回调');
                     }
                 },
-                position: 'bottom'
+                position: 'top',
+                autoClose: false
             })
         }
     },
