@@ -41,7 +41,7 @@ new Vue({
                         console.log('回调');
                     }
                 },
-                //position: 'middle'
+                position: 'middle'
             })
         }
     },
