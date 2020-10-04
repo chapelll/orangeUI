@@ -2,5 +2,10 @@
 创建一个layout大盒子，使用flex布局，子元素是从上往下排列的(column)
 
 如果layout发现子元素有sider组件，就将这个layout改为左右布局(row)
+this.$children.forEach((vm) => {
+      if (vm.$options.name === "OrangeSider") {
+        this.layoutClass.hasSider = true;
+      }
+    });
 
 给layout自己和content加上 flex: 1
