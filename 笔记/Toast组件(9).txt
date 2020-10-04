@@ -1,0 +1,21 @@
+用toast组件和plugin插件来做，使用install关键字来定义插件
+export default {
+    install(Vue, options) {
+        Vue.prototype.$toast = function() {
+            console.log('我是toast');
+        }
+    }
+}
+在全局上引用并使用该插件: Vue.use(plugin)
+
+toast组件实际上是一个盒子，里面是一个slot插槽，接收外来的信息(plugin插件会传入相关信息)
+
+插件要做的事情就是当按钮被点击(触发事件)
+就会生成一个toast组件(是一个div，包含信息和关闭按钮) --- 使用插件时会配置传递信息，toast的作用就是显示这个信息
+然后把这个组件显示在页面上(顶部、中间、底部) 组件自己的样式决定的
+
+自动关闭: mounted阶段设置一个定时器，定时器时间到了就销毁自己 this.$el.remove() // this是当前组件 $el是挂载在页面上的元素
+传入关闭按钮和回调: 全局使用plugin插件的时候可以选择传入message信息和一个closeButton对象(包含关闭按钮文本和回调函数)
+如果不传closeButton的话，toast组件会设置一个默认值，关闭按钮文本为 "关闭"，回调函数为undefined
+点击关闭按钮，会直接关闭这个toast组件，并执行传入的回调
+
