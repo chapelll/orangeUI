@@ -34,14 +34,13 @@ export default {
         };
       },
     },
-    // props传递一个对象时需要使用函数写法
     position: {
       type: String,
       default: "top",
       validator(value) {
         return ["top", "bottom", "middle"].indexOf(value) >= 0;
-      },
-    },
+      }
+    }
   },
   methods: {
     close() {
