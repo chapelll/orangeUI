@@ -23,7 +23,7 @@ export default {
     },
     autoCloseDelay: {
       type: Number,
-      default: 2,
+      default: 300,
     },
     closeButton: {
       type: Object,
@@ -71,6 +71,37 @@ export default {
 $font-size: 14px;
 $toast-min-height: 40px;
 $toast-bg: rgba(0, 0, 0, 0.75);
+$animation-duration: 500ms;
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translate(-50%,100%);
+    
+  } 
+  100% {
+    opacity: 1;
+    transform: translate(-50%,0);
+  }
+}
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translate(-50%,-100%);
+  } 
+  100% {
+    opacity: 1;
+    transform: translate(-50%,0);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  } 
+  100% {
+    opacity: 1;
+  }
+}
 .toast {
   display: flex;
   align-items: center;
@@ -87,14 +118,22 @@ $toast-bg: rgba(0, 0, 0, 0.75);
   &.position-top {
     top: 0;
     transform: translateX(-50%);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    animation: slide-down $animation-duration;
   }
   &.position-bottom {
     bottom: 0;
     transform: translateX(-50%);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    animation: slide-up $animation-duration;
   }
   &.position-middle {
     top: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%,-50%);
+    animation: fade-in $animation-duration;
+
   }
 }
 .close {
