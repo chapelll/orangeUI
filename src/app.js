@@ -10,6 +10,11 @@ import Footer from './footer.vue'
 import Sider from './sider.vue'
 import Content from './content.vue'
 import Toast from './toast.vue'
+import Tabs from './tabs.vue'
+import TabsHead from './tabs-head.vue'
+import TabsBody from './tabs-body.vue'
+import TabsItem from './tabs-item.vue'
+import TabsPane from './tabs-pane.vue'
 
 
 Vue.component('g-button', Button)
@@ -23,6 +28,11 @@ Vue.component('g-footer', Footer)
 Vue.component('g-sider', Sider)
 Vue.component('g-content', Content)
 Vue.component('g-toast', Toast)
+Vue.component('g-tabs', Tabs)
+Vue.component('g-tabs-head', TabsHead)
+Vue.component('g-tabs-body', TabsBody)
+Vue.component('g-tabs-item', TabsItem)
+Vue.component('g-tabs-pane', TabsPane)
 
 import plugin from './plugin.js' //引入插件
 Vue.use(plugin) //使用插件
@@ -42,13 +52,14 @@ new Vue({
                     }
                 },
                 position: 'top',
-                autoClose: false
+                // autoClose: 3
             })
-        }
+        },
     },
     data() {
         return {
-            message: '支持双向数据绑定'
+            message: '支持双向数据绑定',
+            selectedTab: 'game',
         }
     },
 })

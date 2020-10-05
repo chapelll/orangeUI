@@ -61,6 +61,23 @@
 
 <body>
     <div id="app">
+            <g-tabs :selected.sync="selectedTab">
+                <g-tabs-head >
+                    <g-tabs-item name="amusement">娱乐</g-tabs-item>
+                    <g-tabs-item name="finance" disabled>财经</g-tabs-item>
+                    <g-tabs-item name="game">游戏</g-tabs-item>
+                    <g-tabs-item name="buy">
+                        <g-icon name="setting"></g-icon>
+                        购物
+                    </g-tabs-item>
+                </g-tabs-head>
+                <g-tabs-body>
+                    <g-tabs-pane name="amusement">娱乐新闻</g-tabs-pane>
+                    <g-tabs-pane name="finance">财经咨询</g-tabs-pane>
+                    <g-tabs-pane name="game">游戏圈</g-tabs-pane>
+                    <g-tabs-pane name="buy">商品推荐</g-tabs-pane>
+                </g-tabs-body>
+            </g-tabs-tabs>
 
         <g-button @click.native="showToast">点我</g-button>
 
