@@ -8,3 +8,9 @@ tabs-head里面放tabs-item(各个标题)     tabs-body里面放tabs-pane(各个
 高亮，pane发现自己的name相同就显示自己，其余的隐藏起来。
 
 高亮和隐藏都是通过CSS添加类名和v-if完成的
+
+滑动的下标怎么做的？
+
+滑动的下标其实是一个div盒子的下边框，当我们点击一个item时，这个item会高亮，然后把这个高亮
+的item的宽度及距最左边的距离给div盒子，让它移动到和被点击的item一样的位置
+通过添加 transition: all 350ms;来显示一个动画效果

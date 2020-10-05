@@ -24,12 +24,12 @@ export default {
   mounted() {
     this.$children.forEach((vm) => {
       if (vm.$options.name === "OrangeTabsHead") {
-        vm.$children.forEach((item) => {
+        vm.$children.forEach((childVm) => {
           if (
-            item.$options.name === "OrangeTabsItem" &&
-            item.name === this.selected
+            childVm.$options.name === "OrangeTabsItem" &&
+            childVm.name === this.selected
           ) {
-            this.eventBus.$emit("update:selected", this.selected, item);
+            this.eventBus.$emit("update:selected", this.selected, childVm);
             // 当tabs挂载时就会向外触发事件，告知其它组件selected的值和被选中的这一个组件 (只会触发进入页面的这一次)
           }
         });
