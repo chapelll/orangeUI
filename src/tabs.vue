@@ -22,8 +22,21 @@ export default {
     };
   },
   mounted() {
-    this.eventBus.$emit("update:selected", this.selected);
-    // 当tabs挂载时就会向外触发事件，告知其它组件 selected 的值
+    this.$children.forEach((vm) => {
+      if (vm.$options.name === "OrangeTabsHead") {
+        vm.$children.forEach((item) => {
+          if (
+            item.$options.name === "OrangeTabsItem" &&
+            item.name === this.selected
+          ) {
+            this.eventBus.$emit("update:selected", this.selected, item);
+            // 当tabs挂载时就会向外触发事件，告知其它组件selected的值和被选中的这一个组件 (只会触发进入页面的这一次)
+          }
+        });
+      }
+    });
+
+    
   },
   provide() {
     // 使用provide定义的属性，所有子孙后代都可以使用inject来获取

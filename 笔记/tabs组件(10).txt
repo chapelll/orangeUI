@@ -1,1 +1,10 @@
 vue组件的触发事件 $emit 是不会冒泡的
+
+创建一个tabs组件，里面放 tabs-head(标题区域) 和 tabs-body(内容区域)
+tabs-head里面放tabs-item(各个标题)     tabs-body里面放tabs-pane(各个内容)
+
+引入总线eventBus，当我点击各个标题时，就会触发总线上的事件 'update:selected',并附上参数: 被点击的标题的name
+所有组件都使用eventBus去监听这个事件，并且查看name是不是和自己的name相同。item发现自己的name相同就让自己
+高亮，pane发现自己的name相同就显示自己，其余的隐藏起来。
+
+高亮和隐藏都是通过CSS添加类名和v-if完成的
