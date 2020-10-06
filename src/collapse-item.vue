@@ -1,6 +1,6 @@
 <template>
   <div class="collapseItem">
-    <div class="title" @click="switchContent">
+    <div class="title" @click="toggle">
       {{ title }}
     </div>
     <div class="content" v-if="open">
@@ -23,9 +23,28 @@ export default {
       open: false,
     };
   },
+  inject: ["eventBus"],
+  mounted() {
+    this.eventBus && this.eventBus.$on("update:selected", (vm) => {
+      if (vm !== this) {
+        //如果显示的那个实例不是自己
+        this.close();
+        //关闭自己
+      }
+    });
+  },
   methods: {
-    switchContent() {
-      this.open = !this.open;
+    toggle() {
+      if (this.open) {
+        this.open = false;
+      } else {
+        this.open = true;
+        // 显示内容时触发事件
+        this.eventBus && this.eventBus.$emit("update:selected", this);
+      }
+    },
+    close() {
+      this.open = false;
     },
   },
 };
