@@ -59,7 +59,7 @@ new Vue({
     data() {
         return {
             message: '支持双向数据绑定',
-            selectedTab: 'game',
+            selectedTab: 'finance',
         }
     },
 })
