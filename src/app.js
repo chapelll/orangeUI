@@ -15,6 +15,8 @@ import TabsHead from './tabs-head.vue'
 import TabsBody from './tabs-body.vue'
 import TabsItem from './tabs-item.vue'
 import TabsPane from './tabs-pane.vue'
+import Collapse from './collapse.vue'
+import CollapseItem from './collapse-item.vue'
 
 
 Vue.component('g-button', Button)
@@ -33,6 +35,8 @@ Vue.component('g-tabs-head', TabsHead)
 Vue.component('g-tabs-body', TabsBody)
 Vue.component('g-tabs-item', TabsItem)
 Vue.component('g-tabs-pane', TabsPane)
+Vue.component('g-collapse', Collapse)
+Vue.component('g-collapse-item', CollapseItem)
 
 import plugin from './plugin.js' //引入插件
 Vue.use(plugin) //使用插件

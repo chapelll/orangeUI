@@ -1,0 +1,5 @@
+两个组件 collapse 和 collapse-item (item放在collapse中) 在collapse-item 中传入 title="标题" 来设置一个标题
+
+collapse-item 内部有两个盒子，第一个盒子渲染标题，第二个盒子渲染内容(它使用slot插槽)
+collapse-item 有一个data为"open"，默认为false，内容盒子有v-if = "open"。 当我们点击标题时，
+就会把data中的"open"取反，这样相应的内容盒子就会显示出来了
