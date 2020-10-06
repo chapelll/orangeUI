@@ -17,6 +17,9 @@ export default {
       type: String,
       required: true,
     },
+    name: {
+      type: String,
+    },
   },
   data() {
     return {
@@ -25,13 +28,15 @@ export default {
   },
   inject: ["eventBus"],
   mounted() {
-    this.eventBus && this.eventBus.$on("update:selected", (vm) => {
-      if (vm !== this) {
-        //如果显示的那个实例不是自己
-        this.close();
-        //关闭自己
-      }
-    });
+    this.eventBus &&
+      this.eventBus.$on("update:selected", (name) => {
+        if (name !== this.name) {
+          //如果显示的那个实例不是自己
+          this.close(); //关闭自己
+        } else {
+          this.show();
+        }
+      });
   },
   methods: {
     toggle() {
@@ -40,11 +45,14 @@ export default {
       } else {
         this.open = true;
         // 显示内容时触发事件
-        this.eventBus && this.eventBus.$emit("update:selected", this);
+        this.eventBus && this.eventBus.$emit("update:selected", this.name);
       }
     },
     close() {
       this.open = false;
+    },
+    show() {
+      this.open = true;
     },
   },
 };
