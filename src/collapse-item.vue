@@ -1,8 +1,6 @@
 <template>
   <div class="collapseItem">
-    <div class="title" @click="toggle">
-      {{ title }}
-    </div>
+    <div class="title" @click="toggle">{{ title }}</div>
     <div class="content" v-if="open">
       <slot></slot>
     </div>
@@ -29,30 +27,25 @@ export default {
   inject: ["eventBus"],
   mounted() {
     this.eventBus &&
-      this.eventBus.$on("update:selected", (name) => {
-        if (name !== this.name) {
-          //如果显示的那个实例不是自己
-          this.close(); //关闭自己
+      this.eventBus.$on("update:selected", (names) => {
+        if (names.indexOf(this.name) >= 0) {
+          this.open = true;
         } else {
-          this.show();
+          //如果显示的那个实例不是自己
+          this.open = false
         }
       });
   },
   methods: {
     toggle() {
       if (this.open) {
-        this.open = false;
+        this.eventBus &&
+          this.eventBus.$emit("update:removeSelected", this.name);
       } else {
         this.open = true;
         // 显示内容时触发事件
-        this.eventBus && this.eventBus.$emit("update:selected", this.name);
+        this.eventBus && this.eventBus.$emit("update:addSelected", this.name);
       }
-    },
-    close() {
-      this.open = false;
-    },
-    show() {
-      this.open = true;
     },
   },
 };

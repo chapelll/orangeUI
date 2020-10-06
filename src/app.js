@@ -64,6 +64,7 @@ new Vue({
         return {
             message: '支持双向数据绑定',
             selectedTab: 'finance',
+            selected: ["2"]
         }
     },
 })
