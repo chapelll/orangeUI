@@ -1,12 +1,12 @@
 module.exports = {
   base: '/orangeUI/',
   title: '橘子UI',
-  description: '一个好用的UI框架',
+  description: '一个简单好用的UI组件库',
   themeConfig: {
     nav: [
       { text: '主页', link: '/' },
-      { text: '文档', link: '/guide/' },
-      { text: '交流', link: 'https://google.com' },
+      { text: '文档', link: '/install/' },
+      { text: 'GitHub', link: 'https://github.com/chapelll/orangeUI' },
     ],
     sidebar: [
 
