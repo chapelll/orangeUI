@@ -6,17 +6,26 @@
 </template>
 
 <script>
-import Icon from './icon.vue'
+import Icon from "./icon.vue";
 export default {
-  name: 'OrangeButton',
+  name: "OrangeButton",
   components: {
-    'g-icon': Icon
+    "g-icon": Icon,
   },
   props: ["icon"],
 };
 </script>
 
 <style lang="scss" scoped>
+$font-size: 14px;
+$button-height: 32px;
+$button-bg: white;
+$button-active-bg: #eee;
+$border-radius: 4px;
+$color: #333;
+$border-color: #999;
+$border-color-hover: #666;
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -30,19 +39,19 @@ export default {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: var(--font-size);
-  height: var(--button-height);
+  font-size: $font-size;
+  height: $button-height;
   padding: 0 1em;
-  border-radius: var(--button-radius);
-  border: 1px solid var(--border-color);
-  background: var(--button-bg);
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  background: $button-bg;
   vertical-align: middle;
   &:hover {
-    border-color: var(--border-color-hover);
+    border-color: $border-color-hover;
     cursor: pointer;
   }
   &:active {
-    background-color: var(--button-active-bg);
+    background-color: $button-active-bg;
   }
   &:focus {
     outline: none;
