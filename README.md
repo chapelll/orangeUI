@@ -14,9 +14,11 @@
 
     使用前请在CSS中设置 border-box
 
+
     ```
     *,*::before,*::after { box-sizing: border-box; }
     ```
+
 
     你还需要设置颜色等默认变量
 
@@ -31,8 +33,8 @@
         --border-color: #999;
         --border-color-hover: #666;
         }
-
     ```
+
 
     该组件库支持IE15以上的浏览器版本
 
@@ -41,6 +43,7 @@
     ```
     npm i --save orangeui-test
     ```
+
 
 3.引入 orangeUI
 
@@ -74,8 +77,7 @@
         'o-tabs-pane': TabsPane,
         'o-toast': Toast,
  }
-}
-    ```
+}```
 
 ## 文档
 
