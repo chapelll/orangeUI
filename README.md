@@ -22,17 +22,15 @@
 
 2.安装 orangeUI
 
-```script
+```shell script
 npm i --save orangeui-test 
 ```
 
 
 3.引入 orangeUI
 
-```vue
-import {Button,Icon,Col, Collapse, CollapseItem, Content, Footer, Header, Input, Layout
-, Row, Sider, Tabs, TabsHead, TabsBody, TabsItem, TabsPane, Toast,plugin} 
-from 'orangeui-test'
+```javascript
+import {Button, Icon, Col,Collapse, CollapseItem, Content, Footer, Header, Input, Layout, Row, Sider, Tabs, TabsHead, TabsBody, TabsItem, TabsPane, Toast, plugin} from 'orangeui-test'
 import 'orangeui-test/dist/index.css'    
 import Vue from 'vue'
 Vue.use(plugin)
