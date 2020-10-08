@@ -13,7 +13,7 @@ Sinon（西农）是一个 spy / stub / mock 库，用以辅助测试（使用�
 
 先使用 npx parcel build index.js --no-cache --no-minify 进行打包 
 再使用 npm publish 上传自己的包 (记得在webpack配置中更新版本号)
-在测试中文件中进行下载 yarn add orangeui-test-1
+在测试中文件中进行下载 yarn add orangeui-test
 
 设为淘宝镜像  npm config set registry http://registry.npm.taobao.org/
 设为官方源     npm config set registry https://registry.npmjs.org
