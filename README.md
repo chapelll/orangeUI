@@ -6,7 +6,7 @@
 
 ## 介绍
 
-这是我在学习 Vue 过程中做的一个 UI组件库，希望对你有用
+这是我在学习 Vue 过程中做的一个 UI组件库，希望对你有所帮助。
 
 ## 开始使用
 
@@ -39,22 +39,42 @@
 2.安装 orangeUI
 
     ```
-    npm i --save orangeui-test-1
+    npm i --save orangeui-test
     ```
 
 3.引入 orangeUI
 
     ```
-    import { Button, Icon } from "orangeui-test-1";
-    import "orangeui-test-1/dist/index.css";
+   import {Button,Icon,Col, Collapse, CollapseItem, Content, Footer, Header, Input, Layout
+         , Row, Sider, Tabs, TabsHead, TabsBody, TabsItem, TabsPane, Toast,plugin
+       } from 'orangeui-test'
+    import 'orangeui-test/dist/index.css'    
+    import Vue from 'vue'
+    Vue.use(plugin)
 
     export default {
-    name: "App",
-    components: {
-        "g-button": Button,
-        "g-icon": Icon,
-    }
-    }
+         name: 'app',
+         components: {
+        'o-button':Button,
+        'o-icon':Icon,
+        'o-col':Col,
+        'o-collapse':Collapse,
+        'o-collapse-item':CollapseItem,
+        'o-content': Content,
+        'o-footer': Footer,
+        'o-header': Header,
+        'o-input': Input,
+        'o-layout': Layout,
+        'o-row': Row,
+        'o-sider': Sider,
+        'o-tabs': Tabs,
+        'o-tabs-head': TabsHead,
+        'o-tabs-body': TabsBody,
+        'o-tabs-item': TabsItem,
+        'o-tabs-pane': TabsPane,
+        'o-toast': Toast,
+ }
+}
     ```
 
 ## 文档
