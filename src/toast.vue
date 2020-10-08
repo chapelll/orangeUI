@@ -103,6 +103,7 @@ $animation-duration: 500ms;
   }
 }
 .toast {
+  z-index: 20;
   display: flex;
   align-items: center;
   position: fixed;

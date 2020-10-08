@@ -7,7 +7,7 @@
 <input-demos></input-demos>
 </ClientOnly>
 
-### 使用
+### 使用方法
 ---
 ```vue
 <o-input></o-input>

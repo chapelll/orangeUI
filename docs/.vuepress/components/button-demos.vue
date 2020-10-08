@@ -9,13 +9,9 @@
 
 <script>
 import Button from "../../../src/button.vue";
-
 export default {
   components: {
     "o-button": Button,
   },
 };
 </script>
-
-<style lang="scss" scoped>
-</style>
