@@ -12,48 +12,30 @@
 
 1.添加 CSS 样式
 
-    使用前请在CSS中设置 border-box
+使用前请在CSS中设置 border-box
 
+```
+*,*::before,*::after { box-sizing: border-box; }
+```
 
-    ```
-    *,*::before,*::after { box-sizing: border-box; }
-    ```
-
-
-    你还需要设置颜色等默认变量
-
-    ```
-    :root {
-        --font-size: 14px;
-        --button-height: 32px;
-        --button-bg: white;
-        --button-active-bg: #eee;
-        --button-radius: 4px;
-        --color: #333;
-        --border-color: #999;
-        --border-color-hover: #666;
-        }
-    ```
-
-
-    该组件库支持IE15以上的浏览器版本
+该组件库支持IE15以上的浏览器版本
 
 2.安装 orangeUI
 
-    ```
-    npm i --save orangeui-test
-    ```
+```
+npm i --save orangeui-test 
+```
 
 
 3.引入 orangeUI
 
-    ```
-   import {Button,Icon,Col, Collapse, CollapseItem, Content, Footer, Header, Input, Layout
-         , Row, Sider, Tabs, TabsHead, TabsBody, TabsItem, TabsPane, Toast,plugin
-       } from 'orangeui-test'
-    import 'orangeui-test/dist/index.css'    
-    import Vue from 'vue'
-    Vue.use(plugin)
+```
+import {Button,Icon,Col, Collapse, CollapseItem, Content, Footer, Header, Input, Layout
+, Row, Sider, Tabs, TabsHead, TabsBody, TabsItem, TabsPane, Toast,plugin} 
+from 'orangeui-test'
+import 'orangeui-test/dist/index.css'    
+import Vue from 'vue'
+Vue.use(plugin)
 
     export default {
          name: 'app',
@@ -77,7 +59,8 @@
         'o-tabs-pane': TabsPane,
         'o-toast': Toast,
  }
-}```
+}
+```
 
 ## 文档
 
