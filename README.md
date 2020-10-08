@@ -61,7 +61,7 @@ Vue.use(plugin)
 ```
 
 ## 文档
-
+请访问官网以获得更详细的信息:  https://chapelll.github.io/orangeUI/
 ## 提问
 
 ## 变更记录
