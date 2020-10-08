@@ -2,7 +2,7 @@
 title: 安装
 
 ---
-:orange: 橘子UI 是一个简单好用的 UI 框架，提供了 button,grid,input,layout,tabs,toast,collapse 等常用组件，适合移动端和 PC 端使用。现在开始安装使用吧！
+:orange: 橘子UI 是一个简单好用的 UI 组件库  ，提供了 button,grid,input,layout,tabs,toast,collapse 等常用组件，适合移动端和 PC 端使用。现在开始安装使用吧！
 
 # 安装
 

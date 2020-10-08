@@ -9,7 +9,6 @@ module.exports = {
       { text: 'GitHub', link: 'https://github.com/chapelll/orangeUI' },
     ],
     sidebar: [
-
       {
         title: '入门',
         children: ['/install/', '/get-started/',],

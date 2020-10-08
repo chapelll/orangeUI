@@ -8,6 +8,7 @@ title: '快速上手'
 import { Button } from "orangeui-test";
 import "orangeui-test/dist/index.css";
 ```
+注意: 当你使用对应的组件时，请引入并在components中注册它们。
 
 ## 注册组件
 ```javascript
