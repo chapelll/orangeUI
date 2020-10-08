@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Toast-弹出提示框 | 橘子UI</title>
+    <meta name="generator" content="VuePress 1.6.0">
+    
+    <meta name="description" content="一个简单好用的UI组件库">
+    <link rel="preload" href="/orangeUI/assets/css/0.styles.ce6167f7.css" as="style"><link rel="preload" href="/orangeUI/assets/js/app.9c5e1f44.js" as="script"><link rel="preload" href="/orangeUI/assets/js/2.a428ed11.js" as="script"><link rel="preload" href="/orangeUI/assets/js/23.26501ade.js" as="script"><link rel="prefetch" href="/orangeUI/assets/js/10.b3d999b0.js"><link rel="prefetch" href="/orangeUI/assets/js/11.3bca4d46.js"><link rel="prefetch" href="/orangeUI/assets/js/12.7e294c1c.js"><link rel="prefetch" href="/orangeUI/assets/js/13.22b8b6e2.js"><link rel="prefetch" href="/orangeUI/assets/js/14.1cf6594a.js"><link rel="prefetch" href="/orangeUI/assets/js/15.710ba496.js"><link rel="prefetch" href="/orangeUI/assets/js/16.5d7f66fd.js"><link rel="prefetch" href="/orangeUI/assets/js/17.ab334c40.js"><link rel="prefetch" href="/orangeUI/assets/js/18.b64e11e6.js"><link rel="prefetch" href="/orangeUI/assets/js/19.6881506d.js"><link rel="prefetch" href="/orangeUI/assets/js/20.d0649506.js"><link rel="prefetch" href="/orangeUI/assets/js/21.45129aeb.js"><link rel="prefetch" href="/orangeUI/assets/js/22.87feb4a4.js"><link rel="prefetch" href="/orangeUI/assets/js/24.3e29bcc1.js"><link rel="prefetch" href="/orangeUI/assets/js/25.ae8824cb.js"><link rel="prefetch" href="/orangeUI/assets/js/3.a1e52eb9.js"><link rel="prefetch" href="/orangeUI/assets/js/4.2562e752.js"><link rel="prefetch" href="/orangeUI/assets/js/5.166e0b1d.js"><link rel="prefetch" href="/orangeUI/assets/js/6.bdc40dd2.js"><link rel="prefetch" href="/orangeUI/assets/js/7.c4940bae.js"><link rel="prefetch" href="/orangeUI/assets/js/8.cc8bf72e.js"><link rel="prefetch" href="/orangeUI/assets/js/9.11cd0c40.js">
+    <link rel="stylesheet" href="/orangeUI/assets/css/0.styles.ce6167f7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/orangeUI/" class="home-link router-link-active"><!----> <span class="site-name">橘子UI</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/orangeUI/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/orangeUI/install/" class="nav-link">
+  文档
+</a></div><div class="nav-item"><a href="https://github.com/chapelll/orangeUI" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="outbound-link-title" role="img" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><title id="outbound-link-title">(opens new window)</title> <path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/orangeUI/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/orangeUI/install/" class="nav-link">
+  文档
+</a></div><div class="nav-item"><a href="https://github.com/chapelll/orangeUI" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="outbound-link-title" role="img" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><title id="outbound-link-title">(opens new window)</title> <path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>入门</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>组件</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/orangeUI/components/button.html" class="sidebar-link">Button-按钮</a></li><li><a href="/orangeUI/components/input.html" class="sidebar-link">Input-输入框</a></li><li><a href="/orangeUI/components/grid.html" class="sidebar-link">Grid-栅格</a></li><li><a href="/orangeUI/components/layout.html" class="sidebar-link">Layout-布局</a></li><li><a href="/orangeUI/components/tabs.html" class="sidebar-link">Tabs-标签</a></li><li><a href="/orangeUI/components/toast.html" aria-current="page" class="active sidebar-link">Toast-弹出提示框</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/orangeUI/components/collapse.html" class="sidebar-link">Collapse-折叠面板</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="toast-弹出提示框"><a href="#toast-弹出提示框" class="header-anchor">#</a> Toast-弹出提示框</h1> <h3 id="注意"><a href="#注意" class="header-anchor">#</a> 注意</h3> <p>使用该组件时，你需要引入<span style="color:#3eaf7c;"> Toast </span>组件和<span style="color:#3eaf7c;"> plugin </span>插件，注册组件后再使用 Vue 官方文档中插件的使用方法来使用该插件。</p> <h3 id="预览"><a href="#预览" class="header-anchor">#</a> 预览</h3> <p><!----></p> <h3 id="使用方法"><a href="#使用方法" class="header-anchor">#</a> 使用方法</h3> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>o-button</span> <span class="token attr-name">@click.native</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>auto<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>上方弹出<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>o-button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>o-button</span> <span class="token attr-name">@click.native</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>middle<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>中间弹出<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>o-button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>o-button</span> <span class="token attr-name">@click.native</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>bottom<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>下方弹出<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>o-button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>o-button</span> <span class="token attr-name">@click.native</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>notAuto<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>不自动关闭<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>o-button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>o-button</span> <span class="token attr-name">@click.native</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>callback<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>传入回调<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>o-button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">&quot;vue&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Toast <span class="token keyword">from</span> <span class="token string">&quot;../../../src/Toast&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Button <span class="token keyword">from</span> <span class="token string">&quot;../../../src/Button&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> plugin <span class="token keyword">from</span> <span class="token string">&quot;../../../src/plugin&quot;</span><span class="token punctuation">;</span>
+
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>plugin<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;o-button&quot;</span><span class="token operator">:</span> Button<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">auto</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">//$toast的第一个参数是显示的文本 </span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$toast</span><span class="token punctuation">(</span><span class="token string">&quot;上方弹出toast&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">middle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$toast</span><span class="token punctuation">(</span><span class="token string">&quot;中间弹出toast&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        position<span class="token operator">:</span> <span class="token string">&quot;middle&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 设置弹出位置</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">bottom</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$toast</span><span class="token punctuation">(</span><span class="token string">&quot;下方弹出toast&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        position<span class="token operator">:</span> <span class="token string">&quot;bottom&quot;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">notAuto</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$toast</span><span class="token punctuation">(</span><span class="token string">&quot;不会自动进行关闭&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        closeButton<span class="token operator">:</span> <span class="token punctuation">{</span>
+          text<span class="token operator">:</span> <span class="token string">&quot;点击才关闭&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 设置关闭按钮文本</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        autoClose<span class="token operator">:</span> <span class="token number">999</span><span class="token punctuation">,</span> <span class="token comment">// 显示的时间</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">callback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$toast</span><span class="token punctuation">(</span><span class="token string">&quot;传入一个回调&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        closeButton<span class="token operator">:</span> <span class="token punctuation">{</span>
+          text<span class="token operator">:</span> <span class="token string">&quot;执行回调&quot;</span><span class="token punctuation">,</span> <span class="token comment">//  设置关闭按钮文本</span>
+          <span class="token function-variable function">callback</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">// 传入点击关闭按钮执行的回调</span>
+            <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">&quot;我是传入的回调&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="选项"><a href="#选项" class="header-anchor">#</a> 选项</h3> <hr> <h4 id="_1-设置toast文本内容"><a href="#_1-设置toast文本内容" class="header-anchor">#</a> 1. 设置toast文本内容</h4> <p>在使用插件时，可以通过<span style="color:#3eaf7c;"> this.$toast </span>中的第一个参数来传入自己想要显示的文本。</p> <h4 id="_2-设置toast显示的时间"><a href="#_2-设置toast显示的时间" class="header-anchor">#</a> 2. 设置toast显示的时间</h4> <p>在使用插件时，可以通过<span style="color:#3eaf7c;"> this.$toast </span>中的第二个参数(它是一个对象)来传入<span style="color:#3eaf7c;"> autoClose:'关闭的时间' </span>来设置toast自动关闭的时间(默认为3秒)。</p> <h4 id="_3-设置toast弹出的位置"><a href="#_3-设置toast弹出的位置" class="header-anchor">#</a> 3. 设置toast弹出的位置</h4> <p>在使用插件时，可以通过<span style="color:#3eaf7c;"> this.$toast </span>中的第二个参数(它是一个对象)来传入
+<span style="color:#3eaf7c;"> position:'弹出的位置' </span>来设置toast弹出的位置，支持<span style="color:#3eaf7c;"> top </span><span style="color:#3eaf7c;"> middle </span><span style="color:#3eaf7c;"> bottom </span>三种位置(默认为top)。</p> <h4 id="_4-closebutton-对象"><a href="#_4-closebutton-对象" class="header-anchor">#</a> 4. closeButton 对象</h4> <p>在使用插件时，可以通过<span style="color:#3eaf7c;"> this.$toast </span>中的第二个参数来传入
+一个<span style="color:#3eaf7c;"> closeButton </span>对象，它有两个值: <span style="color:#3eaf7c;"> text </span>(用于设置关闭按钮的文本)和<span style="color:#3eaf7c;"> callback </span>(用来传入一个点击关闭按钮后执行的回调)。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/orangeUI/components/tabs.html" class="prev">
+        Tabs-标签
+      </a></span> <span class="next"><a href="/orangeUI/components/collapse.html">
+        Collapse-折叠面板
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/orangeUI/assets/js/app.9c5e1f44.js" defer></script><script src="/orangeUI/assets/js/2.a428ed11.js" defer></script><script src="/orangeUI/assets/js/23.26501ade.js" defer></script>
+  </body>
+</html>
