@@ -14,7 +14,7 @@
 
 使用前请在CSS中设置 border-box
 
-```
+```css
 *,*::before,*::after { box-sizing: border-box; }
 ```
 
@@ -22,14 +22,14 @@
 
 2.安装 orangeUI
 
-```
+```script
 npm i --save orangeui-test 
 ```
 
 
 3.引入 orangeUI
 
-```
+```vue
 import {Button,Icon,Col, Collapse, CollapseItem, Content, Footer, Header, Input, Layout
 , Row, Sider, Tabs, TabsHead, TabsBody, TabsItem, TabsPane, Toast,plugin} 
 from 'orangeui-test'
